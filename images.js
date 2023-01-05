@@ -27,7 +27,6 @@ async function getAllImages(){
             hard: await loadImage("./images/mouth/hard.png"),
             harder: await loadImage("./images/mouth/harder.png"),
             insane: await loadImage("./images/mouth/insane.png"),
-            extremeDemon: await loadImage("./images/mouth/extreme_demon.png"),
             easyDemon: await loadImage("./images/mouth/easy_demon.png"),
             mediumDemon: await loadImage("./images/mouth/medium_demon.png"),
             hardDemon: await loadImage("./images/mouth/hard_demon.png"),
