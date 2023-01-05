@@ -26,6 +26,7 @@ function draw(){
     let diffName = (t1.substring(0, t1.length / 2) + t2.substring(t2.length / 2)).replace(/ /g, "").toLowerCase();
     diffName = diffName.replace(/([^aeiou])([^aeiou])/, "$1e$2"); //add flow to word by adding vowels between 2 consonants
     diffName = diffName[0].toUpperCase() + diffName.substring(1); //capitalize
+    if(/demon/i.test(k1)) diffName += " Demon";
     document.title = diffName;
 
     ctx.drawImage(images.faces[k1], 0, 0, canvas.width, canvas.height);
