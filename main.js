@@ -9,19 +9,6 @@ const randKey = obj => Object.keys(obj)[Math.floor(Math.random() * Object.keys(o
 const BPM = 172;
 let prevK1, prevK2;
 
-//key names to readable names
-const translations = {
-    easyDemon: "easy demon",
-    mediumDemon: "medium demon",
-    hardDemon: "hard demon",
-    insaneDemon: "insane demon",
-    extremeDemon: "extreme demon"
-}
-
-function translate(k){
-    return translations[k] ? translations[k] : k;
-}
-
 function draw(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -34,9 +21,9 @@ function draw(){
     prevK1 = k1;
     prevK2 = k2;
 
-    const t1 = translate(k1);
-    const t2 = translate(k2).replace("demon", "");
-    let diffName = (t1.substring(0, t1.length / 2) + t2.substring(t2.length / 2)).replace(/ /g, "");
+    const t1 = k1;
+    const t2 = k2.replace(/demon/i, "");
+    let diffName = (t1.substring(0, t1.length / 2) + t2.substring(t2.length / 2)).replace(/ /g, "").toLowerCase();
     diffName = diffName.replace(/([^aeiou])([^aeiou])/, "$1e$2"); //add flow to word by adding vowels between 2 consonants
     diffName = diffName[0].toUpperCase() + diffName.substring(1); //capitalize
     document.title = diffName;
