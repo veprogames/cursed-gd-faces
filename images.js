@@ -11,6 +11,9 @@ async function getAllImages(){
     return {
         faces: {
             easy: await loadImage("./images/faces/easy.png"),
+            normal: await loadImage("./images/faces/normal.png"),
+            hard: await loadImage("./images/faces/hard.png"),
+            harder: await loadImage("./images/faces/harder.png"),
             insane: await loadImage("./images/faces/insane.png"),
             easyDemon: await loadImage("./images/faces/easy_demon.png"),
             mediumDemon: await loadImage("./images/faces/medium_demon.png"),
@@ -19,6 +22,10 @@ async function getAllImages(){
             extremeDemon: await loadImage("./images/faces/extreme_demon.png")
         },
         mouths: {
+            easy: await loadImage("./images/mouth/easy.png"),
+            normal: await loadImage("./images/mouth/normal.png"),
+            hard: await loadImage("./images/mouth/hard.png"),
+            harder: await loadImage("./images/mouth/harder.png"),
             insane: await loadImage("./images/mouth/insane.png"),
             extremeDemon: await loadImage("./images/mouth/extreme_demon.png"),
             easyDemon: await loadImage("./images/mouth/easy_demon.png"),

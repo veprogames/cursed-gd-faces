@@ -13,5 +13,5 @@ function draw(){
 
 getAllImages().then(img => {
     images = img;
-    setInterval(draw, 400);
+    setInterval(draw, 420);
 });
