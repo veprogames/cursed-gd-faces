@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            overflow: hidden;
+        }
+
+        main {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         canvas {
             width: 512px;
             height: 512px;
+        }
+
+        img.bg{
+            position: absolute;
+            z-index: -10;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            filter: brightness(0.6);
+            object-fit: cover;
         }
     </style>
     <meta charset="UTF-8">
@@ -13,7 +42,11 @@
     <title>Eason</title>
 </head>
 <body>
-    <canvas width="1024" height="1024"></canvas>
+    <img class="bg" src="./images/slaughterhouse.webp"/>
+    <main>
+        <p id="loading">Lodin da fish water...</p>
+        <canvas width="1024" height="1024"></canvas>
+    </main>
 
     <script src="images.js"></script>
     <script src="main.js"></script>
