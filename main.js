@@ -6,7 +6,7 @@ let images = {};
 
 const rand = obj => Object.values(obj)[Math.floor(Math.random() * Object.values(obj).length)];
 const randKey = obj => Object.keys(obj)[Math.floor(Math.random() * Object.keys(obj).length)];
-const BPM = 177;
+const BPM = 178;
 let prevK1, prevK2;
 
 function draw(){

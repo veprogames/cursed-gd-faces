@@ -10,6 +10,8 @@ async function loadImage(path){
 async function getAllImages(){
     return {
         faces: {
+            unrated: await loadImage("./images/faces/na.png"),
+            auto: await loadImage("./images/faces/auto.png"),
             easy: await loadImage("./images/faces/easy.png"),
             normal: await loadImage("./images/faces/normal.png"),
             hard: await loadImage("./images/faces/hard.png"),
