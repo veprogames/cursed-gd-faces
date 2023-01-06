@@ -1,6 +1,9 @@
-const canvas = document.querySelector("canvas");
+const canvas = document.getElementById("maincanvas");
+const canvasSmall = document.querySelector("canvas.small");
 const ctx = canvas.getContext("2d");
+const ctxSmall = canvasSmall.getContext("2d");
 const loadingText = document.getElementById("loading");
+const favicon = document.querySelector("link[rel=icon]");
 
 let images = {};
 
@@ -11,6 +14,7 @@ let prevK1, prevK2;
 
 function draw(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctxSmall.clearRect(0, 0, canvas.width, canvas.height);
 
     let k1, k2;
     do {
@@ -31,6 +35,9 @@ function draw(){
 
     ctx.drawImage(images.faces[k1], 0, 0, canvas.width, canvas.height);
     ctx.drawImage(images.mouths[k2], 0, 0, canvas.width, canvas.height);
+    ctxSmall.drawImage(images.faces[k1], 0, 0, canvasSmall.width, canvasSmall.height);
+    ctxSmall.drawImage(images.mouths[k2], 0, 0, canvasSmall.width, canvasSmall.height);
+    favicon.href = canvasSmall.toDataURL();
 }
 
 canvas.style.display = "none";

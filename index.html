@@ -25,6 +25,11 @@
             height: 70vmin;
         }
 
+        canvas.small{
+            display: none;
+            position: absolute;
+        }
+
         #loading {
             font-size: 200%;
             color: white;
@@ -44,13 +49,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico"/>
     <title>Eason</title>
 </head>
 <body>
     <img class="bg" src="./images/slaughterhouse.webp"/>
+    <canvas class="small" width="32" height="32"></canvas>
     <main>
         <p id="loading">Lodin da fish water...</p>
-        <canvas width="1024" height="1024"></canvas>
+        <canvas id="maincanvas" width="1024" height="1024"></canvas>
     </main>
 
     <script src="images.js"></script>
